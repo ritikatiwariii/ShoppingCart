@@ -38,3 +38,6 @@ npm install
 
 # Start the development server
 npm run dev
+## 🌐 Live Demo
+
+🔗 [View Project on Netlify](https://shoppingcartezomy.netlify.app/)
