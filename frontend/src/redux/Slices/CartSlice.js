@@ -2,12 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // Async thunks for backend interaction
 export const fetchCart = createAsyncThunk("cart/fetchCart", async () => {
-    const response = await fetch("/api/cart");
+    const response = await fetch("https://shoppingcart-backend-5vhc.onrender.com/api/cart");
     return response.json();
 });
 
 export const addToCartAsync = createAsyncThunk("cart/add", async (product) => {
-    const response = await fetch("/api/cart", {
+    const response = await fetch("https://shoppingcart-backend-5vhc.onrender.com/api/cart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ productId: product.id }),
@@ -16,7 +16,7 @@ export const addToCartAsync = createAsyncThunk("cart/add", async (product) => {
 });
 
 export const removeFromCartAsync = createAsyncThunk("cart/remove", async (productId) => {
-    await fetch(`/api/cart/${productId}`, { method: "DELETE" });
+    await fetch(`https://shoppingcart-backend-5vhc.onrender.com/api/cart/${productId}`, { method: "DELETE" });
     return productId;
 });
 

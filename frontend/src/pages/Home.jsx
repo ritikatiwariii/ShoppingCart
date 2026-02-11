@@ -3,7 +3,7 @@ import Spinner from "../components/Spinner";
 import Product from "../components/Product";
 
 const Home = () => {
-  const API_URL = "/api/products";
+  const API_URL = "https://shoppingcart-backend-5vhc.onrender.com/api/products";
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
 
