@@ -4,7 +4,6 @@ import { products } from "../data";
 
 const Home = () => {
   const API_URL = "https://shoppingcart-backend-5vhc.onrender.com/api/products";
-  const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState(products);
 
   async function fetchProductData() {
